@@ -1,30 +1,27 @@
 <?php
 
-class LuasLingkaran{
+namespace App\Math; //pasang namespace
+class LuasLingkaran {
 
     public const phi = 3.14;
     public int $jari;
 
-    public function __construct($isijari = 1) {
-        $this->jari = $isijari;
+    public function __construct($isiJari = 1) {
+        $this->jari = $isiJari;
     }
 
-    public function tampil($nama ='ban')  {
+    public function tampil($nama = 'ban'){
         $rumus = LuasLingkaran::phi * $this->jari * $this->jari;
-        echo "Lingkaran {$nama} hasilnya adalah: ". $rumus;
+        echo "Lingkaran {$nama} Hasilnya adalah: ". $rumus;
     }
 
-    public static function testing() {
+    public static function testing(){
         echo "<br/>";
         echo "ini dari static";
     }
 
     public function __destruct() {
-        echo "<br/>";
-        echo "udah ah cape";
+        echo "<br>";
+        echo "uda ah cape";
     }
 }
-
-$lingkaran = new LuasLingkaran(7);
-$lingkaran->tampil('roda'); //panggil method
-LuasLingkaran::testing();
